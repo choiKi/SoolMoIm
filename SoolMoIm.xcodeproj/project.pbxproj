@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */; };
 		C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */; };
-		C4AEDF4528D4DC7C0004E7BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4428D4DC7C0004E7BD /* ViewController.swift */; };
+		C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */; };
 		C4AEDF4828D4DC7C0004E7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AEDF4628D4DC7C0004E7BD /* Main.storyboard */; };
 		C4AEDF4A28D4DC7F0004E7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AEDF4928D4DC7F0004E7BD /* Assets.xcassets */; };
 		C4AEDF4D28D4DC7F0004E7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AEDF4B28D4DC7F0004E7BD /* LaunchScreen.storyboard */; };
 		C4AEDF5828D4DC7F0004E7BD /* SoolMoImTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF5728D4DC7F0004E7BD /* SoolMoImTests.swift */; };
 		C4AEDF6228D4DC7F0004E7BD /* SoolMoImUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF6128D4DC7F0004E7BD /* SoolMoImUITests.swift */; };
 		C4AEDF6428D4DC7F0004E7BD /* SoolMoImUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF6328D4DC7F0004E7BD /* SoolMoImUITestsLaunchTests.swift */; };
+		C4AEDF7528D4E0B20004E7BD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C4AEDF7428D4E0B20004E7BD /* Lottie */; };
+		C4AEDF7A28D4E3450004E7BD /* 50854-cash-or-card.json in Resources */ = {isa = PBXBuildFile; fileRef = C4AEDF7928D4E3450004E7BD /* 50854-cash-or-card.json */; };
+		C4AEDF7D28D4E45B0004E7BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C4AEDF7C28D4E45B0004E7BD /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		C4AEDF3D28D4DC7C0004E7BD /* SoolMoIm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoolMoIm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4AEDF4428D4DC7C0004E7BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C4AEDF4728D4DC7C0004E7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4AEDF4928D4DC7F0004E7BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4AEDF4C28D4DC7F0004E7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		C4AEDF5D28D4DC7F0004E7BD /* SoolMoImUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoolMoImUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AEDF6128D4DC7F0004E7BD /* SoolMoImUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoolMoImUITests.swift; sourceTree = "<group>"; };
 		C4AEDF6328D4DC7F0004E7BD /* SoolMoImUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoolMoImUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C4AEDF7928D4E3450004E7BD /* 50854-cash-or-card.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "50854-cash-or-card.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AEDF7528D4E0B20004E7BD /* Lottie in Frameworks */,
+				C4AEDF7D28D4E45B0004E7BD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +105,10 @@
 		C4AEDF3F28D4DC7C0004E7BD /* SoolMoIm */ = {
 			isa = PBXGroup;
 			children = (
+				C4AEDF7628D4E0CF0004E7BD /* ViewController */,
+				C4AEDF7028D4E0330004E7BD /* JSON */,
 				C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */,
 				C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */,
-				C4AEDF4428D4DC7C0004E7BD /* ViewController.swift */,
 				C4AEDF4628D4DC7C0004E7BD /* Main.storyboard */,
 				C4AEDF4928D4DC7F0004E7BD /* Assets.xcassets */,
 				C4AEDF4B28D4DC7F0004E7BD /* LaunchScreen.storyboard */,
@@ -127,6 +134,22 @@
 			path = SoolMoImUITests;
 			sourceTree = "<group>";
 		};
+		C4AEDF7028D4E0330004E7BD /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				C4AEDF7928D4E3450004E7BD /* 50854-cash-or-card.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		C4AEDF7628D4E0CF0004E7BD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +166,10 @@
 			dependencies = (
 			);
 			name = SoolMoIm;
+			packageProductDependencies = (
+				C4AEDF7428D4E0B20004E7BD /* Lottie */,
+				C4AEDF7C28D4E45B0004E7BD /* SnapKit */,
+			);
 			productName = SoolMoIm;
 			productReference = C4AEDF3D28D4DC7C0004E7BD /* SoolMoIm.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +242,10 @@
 				Base,
 			);
 			mainGroup = C4AEDF3428D4DC7C0004E7BD;
+			packageReferences = (
+				C4AEDF7328D4E0B20004E7BD /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				C4AEDF7B28D4E45B0004E7BD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C4AEDF3E28D4DC7C0004E7BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +264,7 @@
 			files = (
 				C4AEDF4D28D4DC7F0004E7BD /* LaunchScreen.storyboard in Resources */,
 				C4AEDF4A28D4DC7F0004E7BD /* Assets.xcassets in Resources */,
+				C4AEDF7A28D4E3450004E7BD /* 50854-cash-or-card.json in Resources */,
 				C4AEDF4828D4DC7C0004E7BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4AEDF4528D4DC7C0004E7BD /* ViewController.swift in Sources */,
+				C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */,
 				C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */,
 				C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */,
 			);
@@ -602,6 +634,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4AEDF7328D4E0B20004E7BD /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C4AEDF7B28D4E45B0004E7BD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4AEDF7428D4E0B20004E7BD /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4AEDF7328D4E0B20004E7BD /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		C4AEDF7C28D4E45B0004E7BD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4AEDF7B28D4E45B0004E7BD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C4AEDF3528D4DC7C0004E7BD /* Project object */;
 }
