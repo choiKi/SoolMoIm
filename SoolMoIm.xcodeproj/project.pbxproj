@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C400257928D5B56B00B0B3F9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C400257828D5B56B00B0B3F9 /* Then */; };
+		C400257B28D5C5E400B0B3F9 /* SplitTheBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */; };
 		C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */; };
 		C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */; };
 		C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheBillViewController.swift; sourceTree = "<group>"; };
 		C4AEDF3D28D4DC7C0004E7BD /* SoolMoIm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoolMoIm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AEDF7528D4E0B20004E7BD /* Lottie in Frameworks */,
+				C400257928D5B56B00B0B3F9 /* Then in Frameworks */,
 				C4AEDF7D28D4E45B0004E7BD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C400257628D5B10100B0B3F9 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C4AEDF4628D4DC7C0004E7BD /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		C4AEDF3428D4DC7C0004E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -106,13 +118,13 @@
 			isa = PBXGroup;
 			children = (
 				C4AEDF7628D4E0CF0004E7BD /* ViewController */,
-				C4AEDF7028D4E0330004E7BD /* JSON */,
+				C400257628D5B10100B0B3F9 /* StoryBoard */,
 				C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */,
 				C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */,
-				C4AEDF4628D4DC7C0004E7BD /* Main.storyboard */,
 				C4AEDF4928D4DC7F0004E7BD /* Assets.xcassets */,
 				C4AEDF4B28D4DC7F0004E7BD /* LaunchScreen.storyboard */,
 				C4AEDF4E28D4DC7F0004E7BD /* Info.plist */,
+				C4AEDF7028D4E0330004E7BD /* JSON */,
 			);
 			path = SoolMoIm;
 			sourceTree = "<group>";
@@ -146,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */,
+				C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -169,6 +182,7 @@
 			packageProductDependencies = (
 				C4AEDF7428D4E0B20004E7BD /* Lottie */,
 				C4AEDF7C28D4E45B0004E7BD /* SnapKit */,
+				C400257828D5B56B00B0B3F9 /* Then */,
 			);
 			productName = SoolMoIm;
 			productReference = C4AEDF3D28D4DC7C0004E7BD /* SoolMoIm.app */;
@@ -245,6 +259,7 @@
 			packageReferences = (
 				C4AEDF7328D4E0B20004E7BD /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C4AEDF7B28D4E45B0004E7BD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C400257728D5B56B00B0B3F9 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = C4AEDF3E28D4DC7C0004E7BD /* Products */;
 			projectDirPath = "";
@@ -290,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C400257B28D5C5E400B0B3F9 /* SplitTheBillViewController.swift in Sources */,
 				C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */,
 				C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */,
 				C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */,
@@ -636,6 +652,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C400257728D5B56B00B0B3F9 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		C4AEDF7328D4E0B20004E7BD /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -655,6 +679,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C400257828D5B56B00B0B3F9 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C400257728D5B56B00B0B3F9 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
 		C4AEDF7428D4E0B20004E7BD /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C4AEDF7328D4E0B20004E7BD /* XCRemoteSwiftPackageReference "lottie-ios" */;

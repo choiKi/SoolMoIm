@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--슬모임-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SoolMoIm" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,49 +17,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUi-DP-EHJ">
-                                <rect key="frame" x="85" y="138" width="244" height="174"/>
+                                <rect key="frame" x="50" y="218" width="314" height="194"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oUi-DP-EHJ" secondAttribute="trailing" constant="85" id="GMU-kY-KX1"/>
-                            <constraint firstItem="oUi-DP-EHJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="NFC-BS-2Yd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oUi-DP-EHJ" secondAttribute="bottom" constant="550" id="No7-jo-rBd"/>
-                            <constraint firstItem="oUi-DP-EHJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="bd4-rp-UCT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oUi-DP-EHJ" secondAttribute="trailing" constant="50" id="GMU-kY-KX1"/>
+                            <constraint firstItem="oUi-DP-EHJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="NFC-BS-2Yd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oUi-DP-EHJ" secondAttribute="bottom" constant="450" id="No7-jo-rBd"/>
+                            <constraint firstItem="oUi-DP-EHJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bd4-rp-UCT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ArG-Ae-HRy"/>
+                    <navigationItem key="navigationItem" title="슬모임" largeTitleDisplayMode="never" id="ArG-Ae-HRy"/>
                     <connections>
                         <outlet property="lottieView" destination="oUi-DP-EHJ" id="7Oo-VJ-d38"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8115942028987" y="136.60714285714286"/>
+            <point key="canvasLocation" x="1143" y="133"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mtR-Ls-ySz">
+        <!--Split The Bill View Controller-->
+        <scene sceneID="4Nu-dM-c3C">
             <objects>
-                <viewController id="zf7-P1-L7k" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vJ6-IC-VTc">
+                <viewController storyboardIdentifier="SplitTheBillViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bKE-5x-LRB" customClass="SplitTheBillViewController" customModule="SoolMoIm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jsa-3r-pAj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="jhl-Dq-vm0"/>
+                        <viewLayoutGuide key="safeArea" id="pM3-by-xqu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5RE-Fh-pS6"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oKk-iF-ywS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e51-QE-sCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349.275362318841" y="132.58928571428572"/>
+            <point key="canvasLocation" x="2001" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dCK-Tm-akN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SOo-yw-Qql" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nbw-Pl-pNN">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="nbw-Pl-pNN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -70,7 +71,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrE-gr-MsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191" y="139"/>
+            <point key="canvasLocation" x="296" y="137"/>
         </scene>
     </scenes>
     <resources>
