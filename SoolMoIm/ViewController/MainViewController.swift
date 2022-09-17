@@ -12,8 +12,11 @@ import Then
 
 class MainViewController: UIViewController {
 
-    private let animationView = AnimationView(name: "50854-cash-or-card")
-    @IBOutlet weak private var lottieView: UIView!
+    let animationView = AnimationView(name: "50854-cash-or-card")
+    
+    let lottieView = UIView().then {
+        $0.backgroundColor = .white
+    }
 
     let appInfo1 = UILabel().then{
         $0.text = "분위기만 즐겼는데 억울하게 N빵은 그만!"
@@ -35,14 +38,14 @@ class MainViewController: UIViewController {
         // 버튼 4개 다 Bold체 적용하기
         $0.backgroundColor = .systemGreen
         $0.layer.cornerRadius = 20
-        $0.addTarget(self, action: #selector(goSplitTheBill), for: .touchUpInside)
-        $0.isUserInteractionEnabled = true
+        $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
     }
     let withoutAlcoholBtn = UIButton().then{
         $0.setTitle("분위기 값 계산", for: .normal)
         $0.backgroundColor = .systemGreen
         $0.layer.cornerRadius = 20
         $0.addTarget(self, action: #selector(goWithoutAlcoholBtn), for: .touchUpInside)
+        $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         $0.isUserInteractionEnabled = true
     }
     let hitAndMissBtn = UIButton().then{
@@ -50,6 +53,7 @@ class MainViewController: UIViewController {
         $0.backgroundColor = .systemGreen
         $0.layer.cornerRadius = 20
         $0.addTarget(self, action: #selector(goHitAndMissBtn), for: .touchUpInside)
+        $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         $0.isUserInteractionEnabled = true
     }
     
@@ -60,6 +64,7 @@ class MainViewController: UIViewController {
         subviewConstraints()
         mainAnimation()
         navigationTitleHidden()
+        pressButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,10 +72,15 @@ class MainViewController: UIViewController {
            self.animationView.play()
     }
     
-    @objc func goSplitTheBill(sender: UIButton!) {
-        guard let splitTheBillView = storyboard?.instantiateViewController(withIdentifier: "SplitTheBillViewController") else {return}
-        self.navigationController?.pushViewController(splitTheBillView, animated: true)
+    func pressButton() {
+        splitTheBillBtn.addTarget(self, action: #selector(goSplitTheBill), for: .touchUpInside)
     }
+    
+    @objc func goSplitTheBill(sender: UIButton!) {
+        let goSplitTheBillVC = SplitTheBillViewController()
+        self.navigationController?.pushViewController(goSplitTheBillVC, animated: true)
+    }
+    
     @objc func goWithoutAlcoholBtn(sender: UIButton!) {
         print("(:")
     }
@@ -81,6 +91,7 @@ class MainViewController: UIViewController {
     // SubView 관리
     func addSubView() {
         view.backgroundColor = .white
+        view.addSubview(lottieView)
         view.addSubview(appTitle)
         view.addSubview(appInfo1)
         view.addSubview(appInfo2)
@@ -90,6 +101,12 @@ class MainViewController: UIViewController {
     }
     
     func subviewConstraints() {
+        lottieView.snp.makeConstraints{ make in
+            make.leading.equalToSuperview().offset(50)
+            make.trailing.equalToSuperview().offset(-50)
+            make.top.equalToSuperview().offset(150)
+            make.height.equalTo(190)
+        }
         appInfo1.snp.makeConstraints{ make in
             make.height.equalTo(15)
             make.top.equalToSuperview().offset(85)
@@ -111,13 +128,13 @@ class MainViewController: UIViewController {
         splitTheBillBtn.snp.makeConstraints{ make in
             make.width.equalTo(view.bounds.width / 3)
             make.height.equalTo(view.bounds.width / 3)
-            make.top.equalTo(lottieView).offset(225)
+            make.top.equalTo(lottieView).offset(200)
             make.leading.equalToSuperview().offset(view.bounds.width / 8)
         }
         withoutAlcoholBtn.snp.makeConstraints{ make in
             make.width.equalTo(view.bounds.width / 3)
             make.height.equalTo(view.bounds.width / 3)
-            make.top.equalTo(lottieView).offset(225)
+            make.top.equalTo(lottieView).offset(200)
             make.trailing.equalToSuperview().offset(-(view.bounds.width / 8))
         }
         hitAndMissBtn.snp.makeConstraints{ make in
@@ -132,6 +149,7 @@ class MainViewController: UIViewController {
     // 네비게이션 타이틀 히든
     func navigationTitleHidden() {
         self.navigationController?.navigationBar.topItem!.title = "술모임"
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     // 로티 애니메이션

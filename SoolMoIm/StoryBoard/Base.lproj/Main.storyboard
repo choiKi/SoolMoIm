@@ -31,9 +31,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="슬모임" largeTitleDisplayMode="never" id="ArG-Ae-HRy"/>
-                    <connections>
-                        <outlet property="lottieView" destination="oUi-DP-EHJ" id="7Oo-VJ-d38"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

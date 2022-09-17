@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C400257928D5B56B00B0B3F9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C400257828D5B56B00B0B3F9 /* Then */; };
 		C400257B28D5C5E400B0B3F9 /* SplitTheBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */; };
+		C485971828D641570085BB8C /* 70450-bitcoin-calculator.json in Resources */ = {isa = PBXBuildFile; fileRef = C485971728D641570085BB8C /* 70450-bitcoin-calculator.json */; };
 		C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */; };
 		C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */; };
 		C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheBillViewController.swift; sourceTree = "<group>"; };
+		C485971728D641570085BB8C /* 70450-bitcoin-calculator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "70450-bitcoin-calculator.json"; sourceTree = "<group>"; };
 		C4AEDF3D28D4DC7C0004E7BD /* SoolMoIm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoolMoIm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		C4AEDF7028D4E0330004E7BD /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				C485971728D641570085BB8C /* 70450-bitcoin-calculator.json */,
 				C4AEDF7928D4E3450004E7BD /* 50854-cash-or-card.json */,
 			);
 			path = JSON;
@@ -280,6 +283,7 @@
 				C4AEDF4D28D4DC7F0004E7BD /* LaunchScreen.storyboard in Resources */,
 				C4AEDF4A28D4DC7F0004E7BD /* Assets.xcassets in Resources */,
 				C4AEDF7A28D4E3450004E7BD /* 50854-cash-or-card.json in Resources */,
+				C485971828D641570085BB8C /* 70450-bitcoin-calculator.json in Resources */,
 				C4AEDF4828D4DC7C0004E7BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
