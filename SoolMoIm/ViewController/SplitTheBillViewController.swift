@@ -69,7 +69,6 @@ class SplitTheBillViewController: UIViewController {
     // optional 처리, Int 아닐때
     @objc func startCalculate(sender: UIButton!) {
         // 이미지 나오고 2초 후
-        calculateAnimation()
         // 옳은 결과면 결과보여주고, 옳은 결과가 아니라면 에러페이지
         calculate()
         print("1")
@@ -102,7 +101,6 @@ class SplitTheBillViewController: UIViewController {
     
     func calculate() {
         checkCompatibility(ta: Int(totalAmountTextField.text!)!, ptc: Int(participantTextField.text!)!)
-        print("2")
     }
     
     func checkCompatibility(ta: Int!, ptc: Int!) {
@@ -118,8 +116,12 @@ class SplitTheBillViewController: UIViewController {
         }
         guard result > 1000 else {
             // 경고 2
+            customAlert.showAlert(with: "계산 불가",
+                                message: "1인당 1달러도 안나왔어요",
+                                on: self)
             return
         }
+        calculateAnimation()
     }
     
     // View 관련
@@ -199,7 +201,6 @@ extension UIButton {
     func setImage(systemName: String) {
         contentHorizontalAlignment = .fill
         contentVerticalAlignment = .fill
-                
         imageView?.contentMode = .scaleAspectFit
         imageEdgeInsets = .zero
         imageView?.tintColor = .red
