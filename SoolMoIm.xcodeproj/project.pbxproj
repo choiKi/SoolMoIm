@@ -22,6 +22,7 @@
 		C4AEDF7528D4E0B20004E7BD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C4AEDF7428D4E0B20004E7BD /* Lottie */; };
 		C4AEDF7A28D4E3450004E7BD /* 50854-cash-or-card.json in Resources */ = {isa = PBXBuildFile; fileRef = C4AEDF7928D4E3450004E7BD /* 50854-cash-or-card.json */; };
 		C4AEDF7D28D4E45B0004E7BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C4AEDF7C28D4E45B0004E7BD /* SnapKit */; };
+		C4D73F1628D7140E00A7AEB0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D73F1528D7140E00A7AEB0 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C4AEDF6128D4DC7F0004E7BD /* SoolMoImUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoolMoImUITests.swift; sourceTree = "<group>"; };
 		C4AEDF6328D4DC7F0004E7BD /* SoolMoImUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoolMoImUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4AEDF7928D4E3450004E7BD /* 50854-cash-or-card.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "50854-cash-or-card.json"; sourceTree = "<group>"; };
+		C4D73F1528D7140E00A7AEB0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +123,9 @@
 			children = (
 				C4AEDF7628D4E0CF0004E7BD /* ViewController */,
 				C400257628D5B10100B0B3F9 /* StoryBoard */,
-				C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */,
+				C4D73F1428D7140100A7AEB0 /* SubClass */,
 				C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */,
+				C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */,
 				C4AEDF4928D4DC7F0004E7BD /* Assets.xcassets */,
 				C4AEDF4B28D4DC7F0004E7BD /* LaunchScreen.storyboard */,
 				C4AEDF4E28D4DC7F0004E7BD /* Info.plist */,
@@ -164,6 +167,14 @@
 				C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C4D73F1428D7140100A7AEB0 /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				C4D73F1528D7140E00A7AEB0 /* Alert.swift */,
+			);
+			path = SubClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				C400257B28D5C5E400B0B3F9 /* SplitTheBillViewController.swift in Sources */,
 				C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */,
 				C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */,
+				C4D73F1628D7140E00A7AEB0 /* Alert.swift in Sources */,
 				C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
