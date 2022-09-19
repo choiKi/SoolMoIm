@@ -10,6 +10,8 @@
 		C400257928D5B56B00B0B3F9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C400257828D5B56B00B0B3F9 /* Then */; };
 		C400257B28D5C5E400B0B3F9 /* SplitTheBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */; };
 		C485971828D641570085BB8C /* 70450-bitcoin-calculator.json in Resources */ = {isa = PBXBuildFile; fileRef = C485971728D641570085BB8C /* 70450-bitcoin-calculator.json */; };
+		C4A6D00428D87CF5007DD96C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6D00328D87CF5007DD96C /* MainView.swift */; };
+		C4A6D00628D886E3007DD96C /* SplitTheBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6D00528D886E3007DD96C /* SplitTheBillView.swift */; };
 		C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */; };
 		C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */; };
 		C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheBillViewController.swift; sourceTree = "<group>"; };
 		C485971728D641570085BB8C /* 70450-bitcoin-calculator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "70450-bitcoin-calculator.json"; sourceTree = "<group>"; };
+		C4A6D00328D87CF5007DD96C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C4A6D00528D886E3007DD96C /* SplitTheBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheBillView.swift; sourceTree = "<group>"; };
 		C4AEDF3D28D4DC7C0004E7BD /* SoolMoIm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoolMoIm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +98,18 @@
 			isa = PBXGroup;
 			children = (
 				C4AEDF4628D4DC7C0004E7BD /* Main.storyboard */,
+				C4AEDF4B28D4DC7F0004E7BD /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		C4297B2928D875F800EEF5B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4A6D00328D87CF5007DD96C /* MainView.swift */,
+				C4A6D00528D886E3007DD96C /* SplitTheBillView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C4AEDF3428D4DC7C0004E7BD = {
@@ -121,13 +135,13 @@
 		C4AEDF3F28D4DC7C0004E7BD /* SoolMoIm */ = {
 			isa = PBXGroup;
 			children = (
+				C4297B2928D875F800EEF5B1 /* View */,
 				C4AEDF7628D4E0CF0004E7BD /* ViewController */,
-				C400257628D5B10100B0B3F9 /* StoryBoard */,
 				C4D73F1428D7140100A7AEB0 /* SubClass */,
-				C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */,
+				C400257628D5B10100B0B3F9 /* StoryBoard */,
 				C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */,
+				C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */,
 				C4AEDF4928D4DC7F0004E7BD /* Assets.xcassets */,
-				C4AEDF4B28D4DC7F0004E7BD /* LaunchScreen.storyboard */,
 				C4AEDF4E28D4DC7F0004E7BD /* Info.plist */,
 				C4AEDF7028D4E0330004E7BD /* JSON */,
 			);
@@ -321,7 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C400257B28D5C5E400B0B3F9 /* SplitTheBillViewController.swift in Sources */,
+				C4A6D00428D87CF5007DD96C /* MainView.swift in Sources */,
 				C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */,
+				C4A6D00628D886E3007DD96C /* SplitTheBillView.swift in Sources */,
 				C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */,
 				C4D73F1628D7140E00A7AEB0 /* Alert.swift in Sources */,
 				C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */,
