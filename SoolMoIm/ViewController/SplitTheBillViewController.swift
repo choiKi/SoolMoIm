@@ -14,23 +14,25 @@ class SplitTheBillViewController: UIViewController {
     
     private let splitTheBillView = SplitTheBillView()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        splitTheBillView.totalAmountTextField.text = ""
+        splitTheBillView.participantTextField.text = ""
         
         addSubview()
         subviewConstraints()
         navigationTitleHidden()
-        blockPressBtn(sender: splitTheBillView.participantTextField)
-
+        block()
+        pressCalculate()
+        
     }
     
     func block() {
+        
         splitTheBillView.totalAmountTextField.addTarget(self, action: #selector(blockPressBtn(sender:)), for: .editingChanged)
         splitTheBillView.participantTextField.addTarget(self, action: #selector(blockPressBtn(sender:)), for: .editingChanged)
-    }
-    
-    func pressCalculate() {
-        splitTheBillView.resultButton.addTarget(self, action: #selector(splitTheBillView.startCalculate), for: .touchUpInside)
     }
     
     @objc func blockPressBtn(sender: Any?) {
@@ -58,6 +60,50 @@ class SplitTheBillViewController: UIViewController {
         }
     }
     
+    func pressCalculate() {
+        splitTheBillView.resultButton.addTarget(self, action: #selector(startCalculate), for: .touchDown)
+    }
+    
+    @objc func startCalculate(sender: Any?) {
+        // 옳은 결과면 결과보여주고, 옳은 결과가 아니라면 에러페이지
+        checkCompatibility(ta: Int(splitTheBillView.totalAmountTextField.text!)!, ptc: Int(splitTheBillView.participantTextField.text!)!)
+    }
+    
+    func checkCompatibility(ta: Int!, ptc: Int!)  {
+        let ta = Int(splitTheBillView.totalAmountTextField.text!)!
+        let ptc = Int(splitTheBillView.participantTextField.text!)!
+        
+        guard ta >= ptc else {
+            // 경고1
+            print("1")
+            splitTheBillView.customAlert.showAlert(with: "계산 불가",
+                                message: "총액과 총원을 정확히 입력하세요",
+                                on: self)
+            return
+        }
+        calculateAnimation()
+        viewResult()
+        // viewResult
+    }
+    
+    func calculateAnimation() {
+        splitTheBillView.lottieView.addSubview(splitTheBillView.animationView)
+        
+        splitTheBillView.animationView.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+        splitTheBillView.animationView.play()
+    }
+    func viewResult(){
+        
+        let ta = Int(splitTheBillView.totalAmountTextField.text!)!
+        let ptc = Int(splitTheBillView.participantTextField.text!)!
+        var result = ta / ptc
+        // lottie 끝나고 시작했음 좋겠다.
+        splitTheBillView.result.text = "\(result) 원"
+        print(result)
+        
+    }
     
     // View 관련
     
@@ -70,6 +116,7 @@ class SplitTheBillViewController: UIViewController {
         view.addSubview(splitTheBillView.participant)
         view.addSubview(splitTheBillView.participantTextField)
         view.addSubview(splitTheBillView.resultButton)
+        view.addSubview(splitTheBillView.result)
     }
     
     func subviewConstraints() {
@@ -114,6 +161,12 @@ class SplitTheBillViewController: UIViewController {
             make.leading.equalToSuperview().offset(100)
             make.trailing.equalToSuperview().offset(-100)
             make.top.equalTo(splitTheBillView.participantTextField.snp.bottom).offset(30)
+        }
+        splitTheBillView.result.snp.makeConstraints{ make in
+            make.leading.equalToSuperview().offset(100)
+            make.trailing.equalToSuperview().offset(-100)
+            make.top.equalTo(splitTheBillView.resultButton.snp.bottom).offset(50)
+            make.height.equalTo(100)
         }
     }
     

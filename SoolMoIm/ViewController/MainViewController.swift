@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
     
     func pressButton() {
         mainView.splitTheBillBtn.addTarget(self, action: #selector(goSplitTheBill), for: .touchUpInside)
+        mainView.withoutAlcoholBtn.addTarget(self, action: #selector(goWithoutAlcohol), for: .touchUpInside)
     }
     
     @objc func goSplitTheBill(sender: UIButton!) {
@@ -38,8 +39,9 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(goSplitTheBillVC, animated: true)
     }
     
-    @objc func goWithoutAlcoholBtn(sender: UIButton!) {
-        print("(:")
+    @objc func goWithoutAlcohol(sender: UIButton!) {
+        let goWithoutAlcholVC = WithoutAlcholViewController()
+        self.navigationController?.pushViewController(goWithoutAlcholVC, animated: true)
     }
     @objc func goHitAndMissBtn(sender: UIButton!) {
         print(":(")

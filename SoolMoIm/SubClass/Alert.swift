@@ -34,6 +34,7 @@ class Alert {
     func showAlert(with title: String,
                    message: String,
                    on viewController: UIViewController) {
+        
         guard let targetView = viewController.view else {return}
         myTargetView = targetView
         backgroundView.frame = targetView.bounds
@@ -116,17 +117,17 @@ class Alert {
     
     @objc func dismissAlert() {
         guard let targetView = self.myTargetView else {return}
-        UIView.animate(withDuration: 0.25) { [self] in
+        UIView.animate(withDuration: 0.1) { [self] in
             // animations
             self.alertView.snp.makeConstraints{ make in
-                make.bottom.equalToSuperview()
+                make.top.equalToSuperview().offset(40)
                 make.width.equalTo(targetView.frame.size.width - 80)
                 make.height.equalTo(300)
                 make.leading.equalTo(alertView).offset(40)
             }
         } completion: { done in
             if done {
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.1) {
                     // animations
                     self.backgroundView.alpha = 0
                 } completion: { done in

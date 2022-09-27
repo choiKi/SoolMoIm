@@ -12,6 +12,8 @@
 		C485971828D641570085BB8C /* 70450-bitcoin-calculator.json in Resources */ = {isa = PBXBuildFile; fileRef = C485971728D641570085BB8C /* 70450-bitcoin-calculator.json */; };
 		C4A6D00428D87CF5007DD96C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6D00328D87CF5007DD96C /* MainView.swift */; };
 		C4A6D00628D886E3007DD96C /* SplitTheBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6D00528D886E3007DD96C /* SplitTheBillView.swift */; };
+		C4A71ACD28E337C60096C316 /* WithoutAlcholView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A71ACC28E337C60096C316 /* WithoutAlcholView.swift */; };
+		C4A71ACF28E337D60096C316 /* WithoutAlcholViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A71ACE28E337D60096C316 /* WithoutAlcholViewController.swift */; };
 		C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */; };
 		C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */; };
 		C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */; };
@@ -49,6 +51,8 @@
 		C485971728D641570085BB8C /* 70450-bitcoin-calculator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "70450-bitcoin-calculator.json"; sourceTree = "<group>"; };
 		C4A6D00328D87CF5007DD96C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C4A6D00528D886E3007DD96C /* SplitTheBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheBillView.swift; sourceTree = "<group>"; };
+		C4A71ACC28E337C60096C316 /* WithoutAlcholView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAlcholView.swift; sourceTree = "<group>"; };
+		C4A71ACE28E337D60096C316 /* WithoutAlcholViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAlcholViewController.swift; sourceTree = "<group>"; };
 		C4AEDF3D28D4DC7C0004E7BD /* SoolMoIm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoolMoIm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AEDF4028D4DC7C0004E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AEDF4228D4DC7C0004E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				C4A6D00328D87CF5007DD96C /* MainView.swift */,
 				C4A6D00528D886E3007DD96C /* SplitTheBillView.swift */,
+				C4A71ACC28E337C60096C316 /* WithoutAlcholView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			children = (
 				C4AEDF4428D4DC7C0004E7BD /* MainViewController.swift */,
 				C400257A28D5C5E400B0B3F9 /* SplitTheBillViewController.swift */,
+				C4A71ACE28E337D60096C316 /* WithoutAlcholViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -336,8 +342,10 @@
 			files = (
 				C400257B28D5C5E400B0B3F9 /* SplitTheBillViewController.swift in Sources */,
 				C4A6D00428D87CF5007DD96C /* MainView.swift in Sources */,
+				C4A71ACD28E337C60096C316 /* WithoutAlcholView.swift in Sources */,
 				C4AEDF4528D4DC7C0004E7BD /* MainViewController.swift in Sources */,
 				C4A6D00628D886E3007DD96C /* SplitTheBillView.swift in Sources */,
+				C4A71ACF28E337D60096C316 /* WithoutAlcholViewController.swift in Sources */,
 				C4AEDF4128D4DC7C0004E7BD /* AppDelegate.swift in Sources */,
 				C4D73F1628D7140E00A7AEB0 /* Alert.swift in Sources */,
 				C4AEDF4328D4DC7C0004E7BD /* SceneDelegate.swift in Sources */,
