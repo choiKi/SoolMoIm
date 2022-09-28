@@ -20,7 +20,6 @@ class SplitTheBillViewController: UIViewController {
         
         splitTheBillView.totalAmountTextField.text = ""
         splitTheBillView.participantTextField.text = ""
-        
         addSubview()
         subviewConstraints()
         navigationTitleHidden()

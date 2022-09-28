@@ -47,7 +47,6 @@ class SplitTheBillView: UIView {
     }
     
     let resultButton = UIButton().then {
-        $0.setTitle("계산 시작", for: .normal)
         $0.layer.cornerRadius = 20
         $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         $0.backgroundColor = .green

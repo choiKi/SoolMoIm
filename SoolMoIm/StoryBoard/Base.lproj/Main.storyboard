@@ -52,6 +52,21 @@
             </objects>
             <point key="canvasLocation" x="2001" y="139"/>
         </scene>
+        <!--Without Alchol View Controller-->
+        <scene sceneID="J4w-yI-g4i">
+            <objects>
+                <viewController storyboardIdentifier="WithoutAlcholViewController" id="X4o-j3-c3V" customClass="WithoutAlcholViewController" customModule="SoolMoIm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qd4-iV-arU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DSf-4b-NIH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbN-VS-ysm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2707" y="139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dCK-Tm-akN">
             <objects>
