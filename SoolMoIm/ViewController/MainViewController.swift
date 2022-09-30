@@ -114,3 +114,24 @@ class MainViewController: UIViewController {
     }
 }
 
+
+#if DEBUG
+
+import SwiftUI
+
+struct MainViewControllerPresentable: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+    func makeUIViewController(context: Context) -> some UIViewController {
+        MainViewController()
+    }
+}
+
+struct MainViewControllerPrepresentable_PreviewProvider: PreviewProvider {
+    static var previews: some View {
+        MainViewControllerPresentable()
+    }
+}
+
+#endif
