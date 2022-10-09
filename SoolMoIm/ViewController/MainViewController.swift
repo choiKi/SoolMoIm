@@ -23,6 +23,9 @@ class MainViewController: UIViewController {
         navigationTitleHidden()
         pressButton()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationTitleHidden()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
@@ -43,10 +46,7 @@ class MainViewController: UIViewController {
         let goWithoutAlcholVC = WithoutAlcholViewController()
         self.navigationController?.pushViewController(goWithoutAlcholVC, animated: true)
     }
-    @objc func goHitAndMissBtn(sender: UIButton!) {
-        print(":(")
-    }
-    
+
 
     // SubView 관리
     func addSubView() {
@@ -57,7 +57,6 @@ class MainViewController: UIViewController {
         view.addSubview(mainView.appInfo2)
         view.addSubview(mainView.splitTheBillBtn)
         view.addSubview(mainView.withoutAlcoholBtn)
-        view.addSubview(mainView.hitAndMissBtn)
     }
     
     func subviewConstraints() {
@@ -96,13 +95,6 @@ class MainViewController: UIViewController {
             make.width.equalTo(view.bounds.width / 3)
             make.height.equalTo(view.bounds.width / 3)
             make.top.equalTo(mainView.lottieView).offset(200)
-            make.trailing.equalToSuperview().offset(-(view.bounds.width / 8))
-        }
-        mainView.hitAndMissBtn.snp.makeConstraints{ make in
-            // make.width.equalTo(view.bounds.width / 3)
-            make.height.equalTo(view.bounds.width / 4)
-            make.top.equalTo(mainView.splitTheBillBtn.snp.bottom).offset(30)
-            make.leading.equalToSuperview().offset(view.bounds.width / 8)
             make.trailing.equalToSuperview().offset(-(view.bounds.width / 8))
         }
     }

@@ -62,6 +62,11 @@ class SplitTheBillView: UIView {
         $0.font = .boldSystemFont(ofSize: 30)
         $0.textAlignment = .center
     }
+    let shareBtn = UIButton().then{
+        $0.setTitle("카카오톡으로 공유하기", for: .normal)
+        $0.backgroundColor = .red
+        $0.layer.cornerRadius = 20
+    }
     
 }
 

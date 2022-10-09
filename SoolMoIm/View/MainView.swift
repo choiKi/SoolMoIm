@@ -48,14 +48,6 @@ class MainView: UIView {
         $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         $0.isUserInteractionEnabled = true
     }
-    let hitAndMissBtn = UIButton().then{
-        $0.setTitle("술값은 도박", for: .normal)
-        $0.backgroundColor = .systemGreen
-        $0.layer.cornerRadius = 20
-        $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        $0.isUserInteractionEnabled = true
-    }
-
     
     // 로티 애니메이션
     func mainAnimation() {

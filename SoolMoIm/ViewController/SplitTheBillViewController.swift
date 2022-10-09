@@ -9,11 +9,17 @@ import UIKit
 import Lottie
 import SnapKit
 import Then
+import KakaoSDKShare
+import KakaoSDKTemplate
+import SafariServices
+
 
 class SplitTheBillViewController: UIViewController {
     
     private let splitTheBillView = SplitTheBillView()
-    
+
+    let templateId: Int64 = 83633
+    var safariViewController : SFSafariViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +31,7 @@ class SplitTheBillViewController: UIViewController {
         navigationTitleHidden()
         block()
         pressCalculate()
-        
+        shareBtn()
     }
     
     func block() {
@@ -103,6 +109,39 @@ class SplitTheBillViewController: UIViewController {
         print(result)
         
     }
+    func shareBtn() {
+        splitTheBillView.shareBtn.addTarget(self, action: #selector(shareBtnClicked), for: .touchDown)
+    }
+    @objc func shareBtnClicked() {
+        print("push")
+        if ShareApi.isKakaoTalkSharingAvailable() {
+            // 카카오톡으로 카카오톡 공유 가능
+            ShareApi.shared.shareCustom(templateId: templateId, templateArgs:["title":"제목입니다.", "description":"설명입니다."]) {(sharingResult, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("shareCustom() success.")
+                    if let sharingResult = sharingResult {
+                        UIApplication.shared.open(sharingResult.url, options: [:], completionHandler: nil)
+                    }
+                }
+            }
+        }
+        else {
+            // 카카오톡 미설치: 웹 공유 사용 권장
+            // Custom WebView 또는 디폴트 브라우져 사용 가능
+            // 웹 공유 예시 코드
+            if let url = ShareApi.shared.makeCustomUrl(templateId: templateId, templateArgs:["title":"제목입니다.", "description":"설명입니다."]) {
+                self.safariViewController = SFSafariViewController(url: url)
+                self.safariViewController?.modalTransitionStyle = .crossDissolve
+                self.safariViewController?.modalPresentationStyle = .overCurrentContext
+                self.present(self.safariViewController!, animated: true) {
+                    print("웹 present success")
+                }
+            }
+        }
+    }
     
     // View 관련
     
@@ -116,6 +155,7 @@ class SplitTheBillViewController: UIViewController {
         view.addSubview(splitTheBillView.participantTextField)
         view.addSubview(splitTheBillView.resultButton)
         view.addSubview(splitTheBillView.result)
+        view.addSubview(splitTheBillView.shareBtn)
     }
     
     func subviewConstraints() {
@@ -166,6 +206,12 @@ class SplitTheBillViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-100)
             make.top.equalTo(splitTheBillView.resultButton.snp.bottom).offset(50)
             make.height.equalTo(100)
+        }
+        splitTheBillView.shareBtn.snp.makeConstraints{ make in
+            make.leading.equalToSuperview().offset(100)
+            make.trailing.equalToSuperview().offset(-100)
+            make.top.equalTo(splitTheBillView.result.snp.bottom).offset(30)
+            make.height.equalTo(40)
         }
     }
     

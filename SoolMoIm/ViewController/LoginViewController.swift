@@ -9,6 +9,9 @@ import UIKit
 import SnapKit
 import Foundation
 import Then
+import KakaoSDKAuth
+import KakaoSDKUser
+import KakaoSDKCommon
 
 
 class LoginViewController: UIViewController {
@@ -82,7 +85,7 @@ class LoginViewController: UIViewController {
 }
 
 
-
+/*
 #if DEBUG
 
 import SwiftUI
@@ -103,3 +106,4 @@ struct ViewControllerPrepresentable_PreviewProvider: PreviewProvider {
 }
 
 #endif
+*/
